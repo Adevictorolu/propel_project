@@ -13,63 +13,65 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  colors: [
-                    const Color.fromARGB(255, 56, 30, 61),
-                    Colors.purple,
-                  ],
-                ),
-              ),
-              child: Column(
-                children: [
-                  Image.asset(
-                    'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
-                  ),
-                  Gap(30),
-                  HomeButtons(
-                    text: 'Continue with Google',
-                    image:
-                        'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
-                  ),
-                  Gap(8),
-                  HomeButtons(text: 'Use mobile number', image: 'asset/img/Platform=Google, Shape=Original, Colored=True.svg'),
-                  Gap(15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        'Terms of Service',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          decorationColor: Colors.black,
-                        ),
-                      ),
-                      Gap(20),
-                      Text(
-                        'Privacy Policy',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          decorationColor: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
+      body: Column(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: RadialGradient(
+                colors: [
+                  const Color.fromARGB(255, 56, 30, 61),
+                  Colors.purple,
                 ],
               ),
             ),
-          ],
-        ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  height: 300,
+                  'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
+                ),
+                HomeButtons(
+                  text: 'Continue with Google',
+                  image:
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                ),
+                HomeButtons(
+                  text: 'Use mobile number',
+                  image:
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'Terms of Service',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        decorationColor: Colors.black,
+                      ),
+                    ),
+                    Gap(20),
+                    Text(
+                      'Privacy Policy',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        decorationColor: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -83,11 +85,11 @@ class HomeButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(32.0),
+      padding: const EdgeInsets.all(12.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
-          fixedSize: Size(double.infinity, 60),
+          fixedSize: Size(300, 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15)),
           ),
@@ -101,7 +103,7 @@ class HomeButtons extends StatelessWidget {
             Gap(10),
             Text(
               text,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
             ),
           ],
         ),
