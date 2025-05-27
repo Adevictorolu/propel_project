@@ -21,7 +21,7 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 colors: [
-                  const Color.fromARGB(255, 56, 30, 61),
+                  const Color.fromARGB(255, 220, 105, 243),
                   Colors.purple,
                 ],
               ),
@@ -42,10 +42,11 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
                 HomeButtons(
                   text: 'Use mobile number',
                   image:
-                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                      '',
                 ),
+                Gap(20),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Terms of Service',
@@ -85,11 +86,11 @@ class HomeButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
-          fixedSize: Size(300, 50),
+          fixedSize: Size(400, 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15)),
           ),
