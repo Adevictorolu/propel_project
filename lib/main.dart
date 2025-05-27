@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:propel_project/router/route.dart';
 import 'package:propel_project/splashmain.dart';
 
 void main() {
@@ -11,13 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: RouteManager.b,
+      onGenerateRoute: RouteManager.generateroute,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 10, 111, 193),
         fontFamily: 'Montserrat'
       ),
       title: 'Flutter Demo',
-      home: const SplashmainScreen(
-        title: 'Propel by Akinakingbogun'),
+      home: const SplashmainScreen(),
     );
   }
 }

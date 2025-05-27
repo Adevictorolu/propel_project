@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:propel_project/router/route.dart';
 
 class SplashmainScreen extends StatefulWidget {
-  const SplashmainScreen({super.key, required String title});
+  const SplashmainScreen({super.key});
 
   @override
   State<SplashmainScreen> createState() => _SplashmainScreenState();
@@ -19,10 +20,10 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
             height: MediaQuery.of(context).size.height,
             width: double.infinity,
             decoration: BoxDecoration(
-              gradient: RadialGradient(
+              gradient: LinearGradient(
                 colors: [
-                  const Color.fromARGB(255, 220, 105, 243),
-                  Colors.purple,
+                  const Color.fromARGB(255, 3, 35, 215),
+                  Colors.blue,
                 ],
               ),
             ),
@@ -37,12 +38,14 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
                 HomeButtons(
                   text: 'Continue with Google',
                   image:
-                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg', onPressed: () {},
                 ),
                 HomeButtons(
                   text: 'Use mobile number',
                   image:
-                      '',
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg', onPressed: () {
+                        Navigator.of(context).pushReplacementNamed(RouteManager.b);
+                      },
                 ),
                 Gap(20),
                 Row(
@@ -79,10 +82,11 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
 }
 
 class HomeButtons extends StatelessWidget {
-  const HomeButtons({required this.text, required this.image, super.key});
+  const HomeButtons({required this.text, required this.image, super.key, required this.onPressed});
 
   final String text;
   final String image;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -95,7 +99,7 @@ class HomeButtons extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(15)),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
