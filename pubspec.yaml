@@ -24,8 +24,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - asset/img
+    - asset/img/Platform=Google, Shape=Original, Colored=True.svg
     - asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png
+    - asset/img/Blue Technical Background 5.jpg
 
   fonts:
     - family: Montserrat

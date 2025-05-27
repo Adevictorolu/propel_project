@@ -12,6 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Montserrat'
+      ),
       title: 'Flutter Demo',
       home: const SplashmainScreen(
         title: 'Propel by Akinakingbogun'),
