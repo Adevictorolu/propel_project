@@ -21,10 +21,7 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
             width: double.infinity,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [
-                  const Color.fromARGB(255, 3, 35, 215),
-                  Colors.blue,
-                ],
+                colors: [const Color.fromARGB(255, 3, 35, 215), Colors.blue],
               ),
             ),
             child: Column(
@@ -38,14 +35,16 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
                 HomeButtons(
                   text: 'Continue with Google',
                   image:
-                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg', onPressed: () {},
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                  onPressed: () {},
                 ),
                 HomeButtons(
                   text: 'Use mobile number',
                   image:
-                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg', onPressed: () {
-                        Navigator.of(context).pushReplacementNamed(RouteManager.b);
-                      },
+                      'asset/img/Platform=Google, Shape=Original, Colored=True.svg',
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(RouteManager.b);
+                  },
                 ),
                 Gap(20),
                 Row(
@@ -82,7 +81,12 @@ class _SplashmainScreenState extends State<SplashmainScreen> {
 }
 
 class HomeButtons extends StatelessWidget {
-  const HomeButtons({required this.text, required this.image, super.key, required this.onPressed});
+  const HomeButtons({
+    required this.text,
+    required this.image,
+    super.key,
+    required this.onPressed,
+  });
 
   final String text;
   final String image;

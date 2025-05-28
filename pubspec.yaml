@@ -27,6 +27,7 @@ flutter:
     - asset/img/Platform=Google, Shape=Original, Colored=True.svg
     - asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png
     - asset/img/Blue Technical Background 5.jpg
+    - asset/img/illustration continue with phone.svg
 
   fonts:
     - family: Montserrat
