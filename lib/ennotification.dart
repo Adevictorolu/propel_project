@@ -3,14 +3,14 @@ import 'package:gap/gap.dart';
 import 'package:propel_project/colors.dart';
 import 'package:propel_project/router/route.dart';
 
-class EnablelocationScreen extends StatefulWidget {
-  const EnablelocationScreen({super.key});
+class EnnotificationScreen extends StatefulWidget {
+  const EnnotificationScreen({super.key});
 
   @override
-  State<EnablelocationScreen> createState() => _EnablelocationScreenState();
+  State<EnnotificationScreen> createState() => _EnnotificationScreenState();
 }
 
-class _EnablelocationScreenState extends State<EnablelocationScreen> {
+class _EnnotificationScreenState extends State<EnnotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +22,10 @@ class _EnablelocationScreenState extends State<EnablelocationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(Icons.location_on_sharp, color: Colors.white, size: 40),
+              Icon(Icons.notifications_sharp, color: Colors.white, size: 40),
               Gap(10),
               Text(
-                'Enable location services',
+                'Allow notifications',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 38,
@@ -36,7 +36,7 @@ class _EnablelocationScreenState extends State<EnablelocationScreen> {
           ),
           Gap(20),
           Text(
-            'We use your location to show you potential mentors for your field of interest',
+            'We will let you know when you get new matches, messages and upcoming meetings with your mentor',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -55,7 +55,7 @@ class _EnablelocationScreenState extends State<EnablelocationScreen> {
               ),
               onPressed: () {},
               child: Text(
-                'Enable location',
+                'Allow notification',
                 style: TextStyle(
                   color: Colorspage.buttoncolor,
                   fontSize: 16,
@@ -67,7 +67,7 @@ class _EnablelocationScreenState extends State<EnablelocationScreen> {
           Gap(5),
           TextButton(
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed(RouteManager.e);
+              Navigator.of(context).pushReplacementNamed(RouteManager.c);
             },
             child: Text(
               'Not now',
