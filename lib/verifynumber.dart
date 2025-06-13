@@ -72,7 +72,7 @@ class _VerifynumberScreenState extends State<VerifynumberScreen> {
                 fontWeight: FontWeight.w400,
               ),
             ),
-            Gap(41),
+            Gap(40),
             Padding(
               padding: const EdgeInsets.all(40.0),
               child: Row(
