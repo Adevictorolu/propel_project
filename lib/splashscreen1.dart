@@ -20,11 +20,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Gap(50),
-              SvgPicture.asset(
-                height: 250,
-                width: double.infinity,
-                'asset/img/illustration_3.svg',
-              ),
+              Image.asset('asset/img/download (28).jpeg', height: 250, width: double.infinity,),
               Text(
                 'Create you own\nstudy plan',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),

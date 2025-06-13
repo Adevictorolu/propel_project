@@ -38,6 +38,11 @@ class _SplashMainState extends State<SplashMain> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+               Image.asset(
+                  height: 300,
+                  'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
+                ),
+                Gap(10),
               AnimatedTextKit(
                 animatedTexts: [
                   WavyAnimatedText(

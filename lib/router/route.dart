@@ -7,8 +7,6 @@ import 'package:propel_project/splashmain1.dart';
 import 'package:propel_project/splashscreen1.dart';
 import 'package:propel_project/splashscreen2.dart';
 import 'package:propel_project/splashscreen3.dart';
-import 'package:propel_project/verifynumber.dart';
-
 class RouteManager{
   static String a = '/';
   static String b = '/splashscreen1';
