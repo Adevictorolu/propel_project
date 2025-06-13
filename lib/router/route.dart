@@ -3,32 +3,40 @@ import 'package:propel_project/enablelocation.dart';
 import 'package:propel_project/ennotification.dart';
 import 'package:propel_project/phone.dart';
 import 'package:propel_project/splashmain.dart';
+import 'package:propel_project/splashmain1.dart';
+import 'package:propel_project/splashscreen1.dart';
+import 'package:propel_project/splashscreen2.dart';
+import 'package:propel_project/splashscreen3.dart';
 import 'package:propel_project/verifynumber.dart';
 
 class RouteManager{
   static String a = '/';
-  static String b = '/phone';
-  static String c = '/verifyphone';
-  static String d = '/enloc';
+  static String b = '/splashscreen1';
+  static String c = '/splashscreen2';
+  static String d = '/splashscreen3';
   static String e = '/ennotification';
+  static String f = '/ennotification';
+  static String g = '/ennotification';
+  static String h = '/ennotification';
+  static String i = '/ennotification';
 
   static Route generateroute(RouteSettings settings){
     switch (settings.name) {
       case "/":
         return MaterialPageRoute(builder: (context) {
-         return PhoneScreen();
+         return SplashMain();
        },);
-      case "/phone":
+      case "/splashscreen1":
         return MaterialPageRoute(builder: (context) {
-         return PhoneScreen();
+         return SplashScreen1();
        },);
-       case "/verifyphone":
+       case "/splashscreen2":
        return MaterialPageRoute(builder: (context) {
-         return VerifynumberScreen();
+         return SplashScreen2();
        },);
-       case "/enloc":
+       case "/splashscreen3":
         return MaterialPageRoute(builder: (context) {
-         return EnablelocationScreen();
+         return SplashScreen3();
        },);
        case "/ennotification":
         return MaterialPageRoute(builder: (context) {

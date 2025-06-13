@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:propel_project/router/route.dart';
 import 'package:propel_project/splashmain.dart';
+import 'package:propel_project/splashmain1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat'
       ),
       title: 'Flutter Demo',
-      home: const SplashmainScreen(),
+      home: const SplashMain(),
     );
   }
 }

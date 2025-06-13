@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:skill_harvest_project/myrouter/routes.dart';
+import 'package:propel_project/router/route.dart';
 
 class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
@@ -52,7 +52,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
                       fixedSize: Size(170, 40),
                     ),
                     onPressed: () {
-                      Navigator.of(context).pushNamed(RouteManager.f);
+                      Navigator.of(context).pushNamed(RouteManager.e);
                     },
                     child: Text(
                       'Sign Up',

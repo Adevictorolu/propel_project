@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:skill_harvest_project/myrouter/routes.dart';
+import 'package:propel_project/router/route.dart';
 
 class SplashScreen3 extends StatefulWidget {
   const SplashScreen3({super.key});

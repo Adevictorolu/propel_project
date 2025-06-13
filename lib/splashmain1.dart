@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:skill_harvest_project/myrouter/routes.dart';
+import 'package:propel_project/router/route.dart';
 
 class SplashMain extends StatefulWidget {
   const SplashMain({super.key});
@@ -41,7 +41,7 @@ class _SplashMainState extends State<SplashMain> {
               AnimatedTextKit(
                 animatedTexts: [
                   WavyAnimatedText(
-                    'Avotek-to-Learn',
+                    'PROPEL',
                     textStyle: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -53,7 +53,7 @@ class _SplashMainState extends State<SplashMain> {
                 isRepeatingAnimation: true,
               ),
               Text(
-                'Learning Your Way',
+                'Professional Mentership Program for Emerging Leaders',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
