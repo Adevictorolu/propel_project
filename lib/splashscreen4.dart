@@ -17,67 +17,77 @@ class _SplashScreen4State extends State<SplashScreen4> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: [
-              Container(
-                height: 280,
-                width: 280,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colorspage.bluecolor,
-                      offset: Offset(12, 6),
-                    ),
-                    BoxShadow(color: Colorspage.purple, offset: Offset(0, 9)),
-                  ],
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+          Padding(
+            padding: const EdgeInsets.all(34.0),
+            child: Column(
+              children: [
+                Container(
+                  height: 280,
+                  width: 280,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colorspage.bluecolor,
+                        offset: Offset(12, 6),
+                      ),
+                      BoxShadow(color: Colorspage.purple, offset: Offset(0, 9)),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  child: Image.asset(
+                    height: 200,
+                    'asset/img/Coaching.png',
+                    width: double.infinity,
+                  ),
                 ),
-                child: Image.asset(
-                  height: 200,
-                  'asset/img/Coaching.png',
-                  width: double.infinity,
+                Gap(32),
+                Text(
+                  'Join our Community',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                 ),
-              ),
-              Gap(32),
-              Text(
-                'Join our Community',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-              ),
-              Text(
-                'Connect with experienced mentors and peers who can offer valuable insights and advice',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                textAlign: TextAlign.center,
-              ),
-            ],
+                Text(
+                  'Connect with experienced mentors and peers who can offer valuable insights and advice',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign up Now'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colorspage.buttoncolor,
-                  elevation: 10,
-                  fixedSize: Size(200, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colorspage.buttoncolor,
+                    elevation: 3,
+                    fixedSize: Size(180, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                  ),
+                  child: Text(
+                    'Sign up Now',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Login'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colorspage.buttoncolor,
-                  elevation: 10,
-                  fixedSize: Size(200, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colorspage.buttoncolor,
+                    elevation: 3,
+                    fixedSize: Size(180, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                   ),
+                  child: Text('Login', style: TextStyle(color: Colors.white)),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
