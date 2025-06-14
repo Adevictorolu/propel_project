@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:propel_project/enablelocation.dart';
-import 'package:propel_project/ennotification.dart';
-import 'package:propel_project/phone.dart';
-import 'package:propel_project/splashmain.dart';
-import 'package:propel_project/splashmain1.dart';
-import 'package:propel_project/splashscreen1.dart';
-import 'package:propel_project/splashscreen2.dart';
-import 'package:propel_project/splashscreen3.dart';
+import 'package:propel_project/old/ennotification.dart';
+import 'package:propel_project/old/splashmain.dart';
+import 'package:propel_project/old/splashmain1.dart';
+import 'package:propel_project/old/splashscreen1.dart';
+import 'package:propel_project/old/splashscreen2.dart';
+import 'package:propel_project/old/splashscreen3.dart';
 class RouteManager{
   static String a = '/';
   static String b = '/splashscreen1';

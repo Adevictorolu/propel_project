@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:propel_project/router/route.dart';
+import 'package:propel_project/old/splashscreen2.dart';
 import 'package:propel_project/splashscreen1.dart';
 
 void main() {
@@ -12,14 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: RouteManager.a,
-      onGenerateRoute: RouteManager.generateroute,
+      // initialRoute: RouteManager.a,
+      // onGenerateRoute: RouteManager.generateroute,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Montserrat'
       ),
       title: 'Professional Mentorship Program for Emerging Leader',
-      home: const SplashScreen1(),
+      home: const SplashScreen2(),
     );
   }
 }

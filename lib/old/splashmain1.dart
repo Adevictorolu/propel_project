@@ -19,7 +19,6 @@ class _SplashMainState extends State<SplashMain> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,11 +37,14 @@ class _SplashMainState extends State<SplashMain> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-               Image.asset(
-                  height: 300,
+              Image(
+                image: AssetImage(
                   'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
                 ),
-                Gap(10),
+                width: double.infinity,
+                height: 250,
+              ),
+              Gap(10),
               AnimatedTextKit(
                 animatedTexts: [
                   WavyAnimatedText(
