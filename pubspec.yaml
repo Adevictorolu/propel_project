@@ -26,7 +26,11 @@ flutter:
 
   assets:
     - asset/img/
-    - asset/img/download (28).jpeg
+    - asset/img/Coaching.png
+    - asset/img/download (28).png
+    - asset/img/Proven Self-Leadership Strategies To Unlock Your True Potential.png
+    - asset/img/Pavigation (2).svg
+    - asset/img/Pavigation (1).svg
     - asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png
 
   fonts:

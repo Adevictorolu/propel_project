@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:propel_project/colors.dart';
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({super.key});
+class SplashScreen3 extends StatefulWidget {
+  const SplashScreen3({super.key});
 
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<SplashScreen3> createState() => _SplashScreen3State();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _SplashScreen3State extends State<SplashScreen3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,21 +33,22 @@ class _SplashScreen2State extends State<SplashScreen2> {
                       ),
                       BoxShadow(color: Colorspage.purple, offset: Offset(0, 9)),
                     ],
+                    // color: Colorspage.bluecolor,
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                   child: Image.asset(
-                    height: 200,
-                    'asset/img/download (28).png',
+                    'asset/img/Proven Self-Leadership Strategies To Unlock Your True Potential.png',
                     width: double.infinity,
                   ),
                 ),
                 Gap(32),
                 Text(
-                  'Connect. Learn. Grow',
+                  'Streamline your Mentorship Schedules',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center,
                 ),
                 Text(
-                  'Join a community of mentors and mentees driven by shared goals',
+                  'Simplify your tasks and focus on what matters most with our intuitive tools and feature',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
@@ -71,7 +72,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                     ),
                   ),
                 ),
-                SvgPicture.asset('asset/img/pavigation.svg'),
+                SvgPicture.asset('asset/img/Pavigation (1).svg'),
                 TextButton(
                   onPressed: () {},
                   child: Text(
