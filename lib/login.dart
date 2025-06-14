@@ -37,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.all(2.0),
               child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(fontSize: 12.8),
                   hintText: 'Enter Mobile or Email',
@@ -45,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 2,
                       color: Colorspage.buttoncolor,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                 ),
               ),
@@ -58,10 +59,21 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.all(2.0),
               child: TextFormField(
+                keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   suffixIcon: Padding(
-                    padding: const EdgeInsets.only(right: 8.0, top: 2, bottom: 2),
-                    child: IconButton(onPressed: (){}, icon: Icon(Icons.visibility_off_rounded, color: Colorspage.bluecolor,)),
+                    padding: const EdgeInsets.only(
+                      right: 8.0,
+                      top: 2,
+                      bottom: 2,
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.visibility_off_rounded,
+                        color: Colorspage.bluecolor,
+                      ),
+                    ),
                   ),
                   hintStyle: TextStyle(fontSize: 12.8),
                   hintText: 'Enter Password',
@@ -70,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 2,
                       color: Colorspage.buttoncolor,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                 ),
               ),
@@ -136,11 +148,24 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Gap(12),
-            Center(child: Text.rich(TextSpan(
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-              text: "Don't have an account?",  children: [
-              TextSpan(text: ' Register', style: TextStyle(color: Colorspage.bluecolor, fontSize: 14, fontWeight: FontWeight.w500))
-            ]))),
+            Center(
+              child: Text.rich(
+                TextSpan(
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  text: "Don't have an account?",
+                  children: [
+                    TextSpan(
+                      text: ' Register',
+                      style: TextStyle(
+                        color: Colorspage.bluecolor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

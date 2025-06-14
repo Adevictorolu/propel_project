@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:propel_project/login.dart';
+import 'package:propel_project/signup.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat'
       ),
       title: 'Professional Mentorship Program for Emerging Leader',
-      home: const LoginScreen(),
+      home: const SignupScreen(),
     );
   }
 }
