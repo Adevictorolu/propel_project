@@ -35,7 +35,6 @@ class _SplashScreen4State extends State<SplashScreen4> {
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                   child: Image.asset(
-                    height: 200,
                     'asset/img/Coaching.png',
                     width: double.infinity,
                   ),
