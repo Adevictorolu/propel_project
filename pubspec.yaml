@@ -23,10 +23,11 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-
   assets:
     - asset/img/
+    - asset/img/mrAkin.jpg
     - asset/img/Coaching.png
+    - asset/img/469630858_18029294294526943_1452357837890049687_n.jpg
     - asset/img/download (28).png
     - asset/img/Proven Self-Leadership Strategies To Unlock Your True Potential.png
     - asset/img/Pavigation (2).svg
