@@ -13,114 +13,110 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage(
-                        'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
-                      ),
-                    ),
-                    Gap(5),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Akinakingbogun12',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Gap(3),
-                        Text(
-                          'Good Morning',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.add_alert_rounded),
-                  iconSize: 22,
-                  color: Colorspage.bluecolor,
-                ),
-              ],
-            ),
-            Gap(10),
-            TextFormField(
-              decoration: InputDecoration(
-                border: TextBorder(),
-                enabledBorder: TextBorder(),
-                focusedBorder: TextBorder(),
-                errorBorder: TextBorder(),
-                hintText: 'Propel AI, ask me anything',
-                hintStyle: TextStyle(
-                  color: Colors.black,
-                  fontSize: 17,
-                  fontWeight: FontWeight.w500,
-                ),
-                prefixIcon: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.search, size: 20),
-                ),
-                suffixIcon: Icon(
-                  Icons.location_on_sharp,
-                  size: 20,
-                  color: Colorspage.bluecolor,
-                ),
-              ),
-            ),
-            Gap(8),
-            Text(
-              'Explore Courses',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            Gap(8),
-            Listboxes(),
-            Gap(8),
-            Listboxes(),
-            Gap(8),
-            Text(
-              'Best-rated Mentors',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            Gap(8),
-            SizedBox(
-              width: 180,
-              height: 240,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Mentorsfields(),
-                  Gap(10),
-                  Mentorsfields(),
-                  Gap(10),
-                  Mentorsfields(),
-                  Gap(10),
-                  Mentorsfields(),
-                  Gap(10),
-                  Mentorsfields(),
-                  Gap(10),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage(
+                          'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
+                        ),
+                      ),
+                      Gap(5),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Akinakingbogun12',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Gap(3),
+                          Text(
+                            'Good Morning',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.add_alert_rounded),
+                    iconSize: 22,
+                    color: Colorspage.bluecolor,
+                  ),
                 ],
               ),
-            ),
-          ],
+              Gap(10),
+              TextFormField(
+                decoration: InputDecoration(
+                  border: TextBorder(),
+                  enabledBorder: TextBorder(),
+                  focusedBorder: TextBorder(),
+                  errorBorder: TextBorder(),
+                  hintText: 'Propel AI, ask me anything',
+                  hintStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  prefixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.search, size: 20),
+                  ),
+                  suffixIcon: Icon(
+                    Icons.location_on_sharp,
+                    size: 20,
+                    color: Colorspage.bluecolor,
+                  ),
+                ),
+              ),
+              Gap(8),
+              Text(
+                'Explore Courses',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              Gap(8),
+              Listboxes(),
+              Gap(8),
+              Listboxes(),
+              Gap(8),
+              Text(
+                'Best-rated Mentors',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              Gap(8),
+              SizedBox(
+                width: 180,
+                height: 240,
+                child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return Mentorsfields();
+                  },
+                  separatorBuilder: (context, index) {
+                    return Gap(10);
+                  },
+                  itemCount: 20,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
