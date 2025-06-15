@@ -59,6 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.all(2.0),
               child: TextFormField(
+                obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   suffixIcon: Padding(

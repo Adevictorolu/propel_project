@@ -83,6 +83,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: TextFormField(
+                    obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       suffixIcon: Padding(
@@ -111,46 +112,51 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
+                Gap(20),
+                Text(
+                  'Confirm Password',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: TextFormField(
+                    obscureText: true,
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration(
+                      hintStyle: TextStyle(fontSize: 12.8),
+                      hintText: 'Confirm your Password',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 2,
+                          color: Colorspage.buttoncolor,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
-          Text(
-            'Confirm Password',
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-          ),
+          Gap(5),
           Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: TextFormField(
-              keyboardType: TextInputType.visiblePassword,
-              decoration: InputDecoration(
-                hintStyle: TextStyle(fontSize: 12.8),
-                hintText: 'Confirm your Password',
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: Colorspage.buttoncolor,
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+            padding: const EdgeInsets.all(24.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colorspage.buttoncolor,
+                fixedSize: Size(double.maxFinite, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
-            ),
-          ),
-          Gap(15),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colorspage.buttoncolor,
-              fixedSize: Size(double.maxFinite, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-            ),
-            onPressed: () {},
-            child: Text(
-              'Register',
-              style: TextStyle(
-                color: Colorspage.gencolor,
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
+              onPressed: () {},
+              child: Text(
+                'Register',
+                style: TextStyle(
+                  color: Colorspage.gencolor,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
