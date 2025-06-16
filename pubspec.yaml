@@ -25,6 +25,7 @@ flutter:
   uses-material-design: true
   assets:
     - asset/img/
+    - asset/img/507724456_1611037186399339_3578774914377759853_n.jpg
     - asset/img/mrAkin.jpg
     - asset/img/Coaching.png
     - asset/img/469717357_18029294267526943_1835797228880026636_n.jpg

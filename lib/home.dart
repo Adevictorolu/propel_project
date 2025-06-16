@@ -102,17 +102,112 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
               Gap(8),
-              SizedBox(
-                width: 180,
-                height: 240,
-                child: ListView.separated(
-                  itemBuilder: (context, index) {
-                    return Mentorsfields();
-                  },
-                  separatorBuilder: (context, index) {
-                    return Gap(10);
-                  },
-                  itemCount: 20,
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                    Mentorsfields(),
+                    Gap(10),
+                  ],
+                ),
+              ),
+              // SizedBox(
+              //   width: 180,
+              //   height: 240,
+              //   child: ListView.separated(
+              //     scrollDirection: Axis.horizontal,
+              //     itemBuilder: (context, index) {
+              //       return Mentorsfields();
+              //     },
+              //     separatorBuilder: (context, index) {
+              //       return Gap(10);
+              //     },
+              //     itemCount: 8,
+              //   ),
+              // ),
+              Gap(8),
+              Text(
+                'Top Picks in various fields',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              Gap(8),
+              Container(
+                height: 200,
+                width: 300,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      child: Image.asset(
+                        fit: BoxFit.fill,
+                        'asset/img/507724456_1611037186399339_3578774914377759853_n.jpg',
+                      ),
+                    ),
+                    Positioned(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.star, color: Colorspage.bluecolor),
+                                  Gap(1),
+                                  Text('4.5'),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 20,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.star, color: Colorspage.bluecolor),
+                                  Gap(1),
+                                  Text('4.5'),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -176,7 +271,7 @@ class Listboxes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
+      height: 40,
       child: ListView(
         physics: AlwaysScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
