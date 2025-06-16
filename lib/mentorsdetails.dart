@@ -13,17 +13,19 @@ class _MentorDetailsState extends State<MentorDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Mentor Details',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        ),
+      ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Text(
-              'Mentor Details',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            Gap(10),
-            Padding(
-              padding: const EdgeInsets.only(left: 8, right: 8),
-              child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                 color: const Color.fromARGB(255, 227, 224, 224),
                 width: double.infinity,
                 height: 300,
@@ -33,10 +35,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 8, left: 8),
-              child: Container(
+              Container(
                 width: double.infinity,
                 height: 180,
                 decoration: BoxDecoration(
@@ -164,39 +163,40 @@ class _MentorDetailsState extends State<MentorDetails> {
                   ),
                 ),
               ),
-            ),
-            Gap(20),
-            Text(
-              'About Akinakingbogun',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-            ),
-            Gap(10),
-            Text(
-              "He probably looks far too serious for your regular guy, but Akin is a bit of an all-rounder with a witty sense of humor.\nAkin is a graduate of Civil Engineering from the Obafemi Awolowo University Ile Ife, with a cognate 20 years of work experience mostly in engineering consulting and the oil and gas downstream and the commercial banking industry. \nAkin is a registered and COREN certified engineer who holds a masters degree in Water and Environmental Engineering from the University of Lagos in 2007.\nHe also earned his stripes in business(marketing) with an MBA from the Obafemi Awolowo University Ile Ife, same year he completed his Senior Management Programme (SMP) at the Lagos Business School Pan Atlantic University, Lagos.",
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
-            Gap(20),
-            Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colorspage.buttoncolor,
-                  fixedSize: Size(double.maxFinite, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
+              Gap(20),
+              Text(
+                'About Akinakingbogun',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              ),
+              Gap(10),
+              Text(
+                "He probably looks far too serious for your regular guy, but Akin is a bit of an all-rounder with a witty sense of humor.\nAkin is a graduate of Civil Engineering from the Obafemi Awolowo University Ile Ife, with a cognate 20 years of work experience mostly in engineering consulting and the oil and gas downstream and the commercial banking industry. \nAkin is a registered and COREN certified engineer who holds a masters degree in Water and Environmental Engineering from the University of Lagos in 2007.\nHe also earned his stripes in business(marketing) with an MBA from the Obafemi Awolowo University Ile Ife, same year he completed his Senior Management Programme (SMP) at the Lagos Business School Pan Atlantic University, Lagos.",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+              ),
+              Gap(20),
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colorspage.buttoncolor,
+                    fixedSize: Size(double.maxFinite, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
                   ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Book a Schedule',
-                  style: TextStyle(
-                    color: Colorspage.gencolor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
+                  onPressed: () {},
+                  child: Text(
+                    'Book a Schedule',
+                    style: TextStyle(
+                      color: Colorspage.gencolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
