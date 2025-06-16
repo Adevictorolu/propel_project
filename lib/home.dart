@@ -25,10 +25,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: AssetImage(
-                          'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
+                      GestureDetector(
+                        onTap: () {
+                          Drawer(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                            ),
+                            width: 300,
+                            elevation: 12,
+                            backgroundColor: Colorspage.bluecolor,
+                          );
+                        },
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage(
+                            'asset/img/Propel_by_AkinAkingbogun_LOGO-removebg-preview.png',
+                          ),
                         ),
                       ),
                       Gap(5),
@@ -180,6 +194,44 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        elevation: 10,
+        unselectedLabelStyle: TextStyle(
+          fontSize: 12,
+          fontWeight: FontWeight.w500,
+        ),
+        selectedLabelStyle: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+        ),
+        showUnselectedLabels: true,
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colorspage.bluecolor,
+        selectedIconTheme: IconThemeData(
+          size: 25,
+          color: Colorspage.buttoncolor,
+        ),
+        unselectedIconTheme: IconThemeData(size: 22, color: Colors.black),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_rounded),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.health_and_safety_rounded),
+            label: 'Mentors',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message_rounded),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_pin),
+            label: 'Account',
+          ),
+        ],
+      ),
     );
   }
 
@@ -279,7 +331,10 @@ class TopPicks extends StatelessWidget {
           ),
         ),
         Gap(4),
-        Text('Social Media Course', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),),
+        Text(
+          'Social Media Course',
+          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        ),
       ],
     );
   }
