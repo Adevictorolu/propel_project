@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               // SizedBox(
-              //   width: 180,
+              //   width: 180,s
               //   height: 240,
               //   child: ListView.separated(
               //     scrollDirection: Axis.horizontal,
@@ -149,64 +149,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
               Gap(8),
-              Container(
-                height: 200,
-                width: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-                child: Stack(
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
                   children: [
-                    Positioned(
-                      child: Image.asset(
-                        fit: BoxFit.fill,
-                        'asset/img/507724456_1611037186399339_3578774914377759853_n.jpg',
-                      ),
-                    ),
-                    Positioned(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 10,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(4),
-                                ),
-                              ),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.star, color: Colorspage.bluecolor),
-                                  Gap(1),
-                                  Text('4.5'),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 20,
-                              height: 10,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(4),
-                                ),
-                              ),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.star, color: Colorspage.bluecolor),
-                                  Gap(1),
-                                  Text('4.5'),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
+                    TopPicks(),
+                    Gap(10),
                   ],
                 ),
               ),
@@ -221,6 +187,100 @@ class _HomeScreenState extends State<HomeScreen> {
     return OutlineInputBorder(
       borderSide: BorderSide(width: 1, color: Colors.black),
       borderRadius: BorderRadius.all(Radius.circular(10)),
+    );
+  }
+}
+
+class TopPicks extends StatelessWidget {
+  const TopPicks({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                child: Image.asset(
+                  fit: BoxFit.fill,
+                  'asset/img/507724456_1611037186399339_3578774914377759853_n.jpg',
+                ),
+              ),
+              Positioned(
+                top: 158,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 50,
+                        height: 25,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: Colorspage.bluecolor,
+                              size: 20,
+                            ),
+                            Gap(1),
+                            Text(
+                              '4.5',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Gap(55),
+                      Container(
+                        width: 80,
+                        height: 25,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.play_arrow,
+                              color: Colorspage.bluecolor,
+                              size: 20,
+                            ),
+                            Gap(1),
+                            Text(
+                              '7h 3m',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Gap(4),
+        Text('Social Media Course', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),),
+      ],
     );
   }
 }
